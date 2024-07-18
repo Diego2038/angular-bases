@@ -28,4 +28,9 @@ export class MainPageComponent{
   onNewCharacter( character: Character): void {
     this.characters.unshift({...character});
   }
+
+  onDeleteIdCharacter( idCharacter: number): void {
+    // this.characters = this.characters.filter(char => char !== idCharacter);
+    this.characters.splice(idCharacter, 1);
+  }
 }
